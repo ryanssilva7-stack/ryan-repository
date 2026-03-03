@@ -14,10 +14,11 @@ print("\n---Dados---\n")
 print(f"Nome: {nome}")
 print(f"Código:{codigo}")
 print(f"Idade:{idade} anos.")
-print(f"Tempo de tarablho:{tt} anos.")
+print(f"\nTempo de tarablho:{tt} anos.")
 
-if idade >= 65 and tt >= 30 :
-    print("\nRequerer aposentadoria.")
+if idade >= 65 or tt >= 30 :
+    print("\nRequerer aposentadoria.\n")
 else: 
-    print("\nNão requerer aposentadoria.")
+    print("\nNão requerer aposentadoria.\n")
+
 # saída
