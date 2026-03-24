@@ -1,11 +1,16 @@
 import os
-import time
 os.system("cls")
 
 # dados
 soma = 0
-
+par = 0
+impar = 0
 # processo
 for i in range (1, 6):
     numero = int(input(f"Digite o {i}º número: "))
-    print("Números pares:{}; Números impares:{}")
+   
+    if numero % 2 == 0:
+        par += 1
+    else:
+        impar += 1
+    print(f"Números pares: {par}; Números impares: {impar}\n")
