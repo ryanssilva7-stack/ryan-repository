@@ -37,7 +37,7 @@ quantidade_de_precos = []
 
 # processo pedido
 while True:
-    os.system("cls")
+    
     
     print(f"""{F.LC}
 Código   |     Exames     |      Valor
@@ -84,55 +84,75 @@ Código   |     Exames     |      Valor
             preco = 70
             exame_contador +=1
         case _:
-            print("Não é uma opção válida...")
-            print("Tente novamente.\n")
+            print(f"{F.R}Não é uma opção válida...")
+            print(f"Tente novamente.{RESET}\n")
+            time.sleep(1.25)
             continue
     
     armazenamento_de_exames.append(nome)
     quantidade_de_precos.append(preco)
     soma = sum(quantidade_de_precos)
     
-    escolha = input("Deseja marcar mais algum exame? (S/N)\n").upper()
+    escolha = input(f"{F.LB}Deseja marcar mais algum exame? {RESET}(S/N)\n").upper()
 
     if escolha == "N":
-        break
+        break   
 
-    if escolha in ["S", "N"]:
+    elif escolha == "S":
         continue
     else:
-        print("Não é uma escolha válida...")
-        print("Tente novamente.\n")
-        
+        print(f"{F.LR}Não é uma escolha válida...")
+        print(f"Encerrando consulta.{RESET}\n")
+        time.sleep(2)
+        break
+
 # processo pagamento
 while True:
     os.system("cls")
-    print("""
+    print(f"""{F.LC}
     Qual será a forma de pagamento?
-    Convênio;
-    Particular;
-    Cartão de crédito.\n""")
+   
+    Código:
+     (C)  Convênio;
+     (P)  Particular;
+     (CC) Cartão de crédito.\n""")
 
     forma_de_pagamento = input().lower()
 
     match forma_de_pagamento:
-        case "convênio":
+        case "c":
             pagamento = soma - (soma * 0.15)
             desconto = 15
             break
-        case "cartão de crédito":
+        case "cc":
             pagamento = soma + (soma * 0.08)
             acrescimo = 8
             break
-        case "particular":
+        case "p":
             pagamento = soma
             break
         case _:
+            print(f"{F.R}Não é uma opção válida...")
+            print(f"Tente novamente.{RESET}")
             continue
 
 # resultado
 os.system("cls")
 
 for i in range(exame_contador):   
+    print(f"{F.C}Exame:{RESET} {armazenamento_de_exames[i]}")
+    print(f"{F.LB}Preço:{RESET}{F.G}R${F.LG}{quantidade_de_precos[i]},00{RESET}\n")
+
+if forma_de_pagamento == "c":
+    print(f"{F.LM}Valor original:{RESET} {F.G}R${F.LG}{soma},00{RESET}")
+    print(f"{F.LY}Valor a pagar com desconto: {F.G}R${F.LG}{pagamento:.0f},00{RESET}")
+
+elif forma_de_pagamento == "cc":
+    print(f"{F.LM}Valor original:{RESET} {F.G}R${F.LG}{soma},00{RESET}")
+    print(f"{F.LY}Valor a pagar com acréscimo: {F.G}R${F.LG}{pagamento:.0f},00{RESET}")
+
+elif forma_de_pagamento == "p":
+    print(f"{F.LY}Valor a pagar:{RESET} {F.G}R${F.LG}{pagamento:.0f},00{RESET}")}")
     print(f"Exame: R${armazenamento_de_exames[i]},00")
     print(f"Preço: R${quantidade_de_precos[i]},00\n")
     
