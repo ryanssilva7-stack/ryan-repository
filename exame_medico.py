@@ -93,17 +93,15 @@ Código   |     Exames     |      Valor
     quantidade_de_precos.append(preco)
     soma = sum(quantidade_de_precos)
     
-    escolha = input(f"{F.LB}Deseja marcar mais algum exame? {RESET}(S/N)\n").upper()
+    while True:
+        escolha = input(f"{F.LB}Deseja marcar mais algum exame? {RESET}(S/N)\n").upper()
 
+        if escolha in ["S", "N"]:
+            break
+        else:
+            print(f"{F.LR}Não é uma escolha válida...")
+    
     if escolha == "N":
-        break   
-
-    elif escolha == "S":
-        continue
-    else:
-        print(f"{F.LR}Não é uma escolha válida...")
-        print(f"Encerrando consulta.{RESET}\n")
-        time.sleep(2)
         break
 
 # processo pagamento
@@ -152,9 +150,4 @@ elif forma_de_pagamento == "cc":
     print(f"{F.LY}Valor a pagar com acréscimo: {F.G}R${F.LG}{pagamento:.0f},00{RESET}")
 
 elif forma_de_pagamento == "p":
-    print(f"{F.LY}Valor a pagar:{RESET} {F.G}R${F.LG}{pagamento:.0f},00{RESET}")}")
-    print(f"Exame: R${armazenamento_de_exames[i]},00")
-    print(f"Preço: R${quantidade_de_precos[i]},00\n")
-    
-
-print(f"Valor a pagar: R${pagamento:.0f},00")
+    print(f"{F.LY}Valor a pagar:{RESET} {F.G}R${F.LG}{pagamento:.0f},00{RESET}")
