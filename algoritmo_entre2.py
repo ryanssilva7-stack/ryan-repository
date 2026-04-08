@@ -6,7 +6,7 @@ nota = int(input("Digite a nota: "))
 print("\n")
 
 # saida
-if nota <= 0 and nota <= 10:
+if nota < 0 and nota > 10:
     print(f"Nota: {nota}.") 
 else:
     print("A nota deve ser entre 0 e 10.")
