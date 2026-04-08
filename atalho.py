@@ -29,6 +29,9 @@ class F:
     LW  = Fore.LIGHTWHITE_EX
 
 os.system("cls")
+
 # dados
+
 # processamento
+
 # saida
