@@ -47,10 +47,14 @@ while True:
     preco_total += preco
     pratos_solicitados += ", " + prato if pratos_solicitados else prato
    
-    mais_pedidos = input("Deseja fazer um novo pedido? \nUse S ou N: ").lower()
+    while True:
+        mais_pedidos = input("Deseja fazer um novo pedido? \nUse S ou N: ").lower()
    
+        if mais_pedidos in ["s", "n"]:
+            break
+        
     if mais_pedidos == "n":
-        break
+            break
 
 # processo final
 print("\n=== Nota Fiscal ===")
