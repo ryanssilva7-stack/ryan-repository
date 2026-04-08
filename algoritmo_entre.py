@@ -5,5 +5,5 @@ os.system("cls")
 numero = int(input("Digite um número: "))
 
 # saida 
-if numero <= 20 and numero >= 10:
+if numero > 20 or numero < 10:
     print(f"O número {numero} está dentro do intervalo entre 10 e 20.")
