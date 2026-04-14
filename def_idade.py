@@ -1,9 +1,12 @@
 import os
+from datetime import datetime
+
 
 os.system("cls")
 
 def ano_idade(a):
-    i = 2026 - a
+    ano_atual = datetime.today().year
+    i = ano_atual - a
     return i
 
 ano_de_nascimento =int(input("digite o ano de seu nascimento:\n"))
