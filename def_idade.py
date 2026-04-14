@@ -1,11 +1,11 @@
 import os
-from datetime import datetime
+from datetime import date
 
 
 os.system("cls")
 
 def ano_idade(a):
-    ano_atual = datetime.today().year
+    ano_atual = date.today().year
     i = ano_atual - a
     return i
 
