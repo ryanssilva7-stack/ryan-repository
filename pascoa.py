@@ -77,5 +77,5 @@ mes = (var_h + var_l - 7 * var_m + 114) // 31
 dia = (var_h + var_l - 7 * var_m + 114) % 31
 
 # saida
-print("==== Data do domingo de páscoa ====")
-print(f"Data:{dia}/{mes}/{ano}")
+print(f'"{F.LC}==== Data do domingo de páscoa ===={RESET}")
+print(f"{F.LB}Data:{F.LW}{dia}{F.LB}/{F.LW}{mes}{F.LB}/{F.LW}{ano}")
