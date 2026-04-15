@@ -68,7 +68,7 @@ var_k = var_c % 4
 var_l = (32 + 2 * var_e + 2 * var_i - var_h - var_k) % 7
 
 # m
-var_m = (var_a + 11 * var_h - var_k + 22 * var_l) // 451
+var_m = (var_a + 11 * var_h + 22 * var_l) // 451
 
 # mes
 mes = (var_h + var_l - 7 * var_m + 114) // 31
