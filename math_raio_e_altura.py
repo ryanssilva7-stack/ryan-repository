@@ -31,8 +31,9 @@ class F:
 os.system("cls")
 
 # dados
-raio = int(input("Digite a raio do cilindro: "))
-altura = int(input("Digite a altura do cilindro: "))
+print(f"{F.LC}Sobre o cilindro, informe:{RESET}")
+raio = int(input(f"{F.LM}O raio do cilindro: {RESET}"))
+altura = int(input(f"{F.LM}A altura do cilindro: {RESET}"))
 pi = 3.14159
 
 # processamento
@@ -40,5 +41,6 @@ area_da_base = pi * (raio * raio)
 volume = pi * (raio * raio) * altura
 
 # saida
-print(f"Área da base do cilindro: {area_da_base:.2f}")
-print(f"Volume do cilindro: {volume:.2f}")
+print(f"{F.LC}==== Resultado ===={RESET}")
+print(f"{F.M}Área da base do cilindro:{RESET} {area_da_base:.2f}")
+print(f"{F.M}Volume do cilindro:{RESET} {volume:.2f}")

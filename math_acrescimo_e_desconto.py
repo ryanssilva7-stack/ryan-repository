@@ -59,7 +59,8 @@ valor_acrescimo = acrescimo_de_valor(acrescimo, valor)
 valor_desconto = desconto_de_acrescimo(desconto, valor_acrescimo)
 
 # saida
+os.system("cls")
 print(f"\n{F.LY}==== Valor da Compra ===={RESET}")
 print(f"{F.LB}Valor original: {reais}{virgula(valor)}")
-print(f"{F.LR}Valor com acréscimo: {reais}{virgula(valor_acrescimo)}")
-print(f"{F.LC}Valor com desconto: {reais}{virgula(valor_desconto)}")
+print(f"{F.LR}Valor com acréscimo de {acrescimo}%: {reais}{virgula(valor_acrescimo)}")
+print(f"{F.LC}Valor com desconto de {desconto}%: {reais}{virgula(valor_desconto)}")

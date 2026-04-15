@@ -54,6 +54,7 @@ minutos = tempo_total % 60
 horas = tempo_total // 60
 
 # saida
+os.system("cls")
 print(f"\n{F.LB}==== Resultado ===={RESET}")
 print(f"{F.C}Horário inicialização do evento:{RESET} {hora_inicial:02d}:{minuto_inicial:02d}")
 print(f"{F.LC}Horário finalização do evento:{RESET} {hora_final:02d}:{minuto_final:02d}")

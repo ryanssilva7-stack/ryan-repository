@@ -31,12 +31,20 @@ class F:
 os.system("cls")
 
 # dados
-tempo = int(input("Digite um tempo em segundos: "))
+print(f"{F.LB}==== conversão de segundos para horas ===={RESET}")
+tempo = int(input(f"{F.LC}Digite um tempo em segundos: {RESET}"))
 
 # processamento
-minutos = (tempo % 3600) / 60
-horas = tempo / 3600
+minutos = (tempo % 3600) // 60
+horas = tempo // 3600
 segundos = tempo % 60
 
+time.sleep(1)
 # saida
-print(f"{horas:02d}h/{minutos:02d}min/{segundos:02d}s")
+os.system("cls")
+print(f"{F.LB}=== Processando ==={RESET}")
+time.sleep(3)
+
+os.system("cls")
+print(f"{F.LB}==== Resultado ===={RESET}")
+print(f"{F.LC}{tempo} segundos equivalem à:\n{F.LW}{horas:02d}{F.K}:{F.LW}{minutos:02d}{F.K}:{F.LW}{segundos:02d}{RESET}")
