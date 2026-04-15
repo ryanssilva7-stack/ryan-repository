@@ -3,7 +3,7 @@ from colorama import Fore, Back, Style, init
 import time
 
 # Initialize colorama
-init()
+init(autoreset=True)
 
 # Atalhos de Estilo
 RESET = Style.RESET_ALL
