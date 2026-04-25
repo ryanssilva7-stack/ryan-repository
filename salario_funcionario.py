@@ -91,14 +91,29 @@ matricula = input("Digite a matrícula do funcionário: ")
 senha = int(input("Digite a senha da matrícula do funcionário: "))
 
 folha()
-salario = float(input("Digite o valor do salário: "))
-print("O funcionário:")
-transporte = input("Possui ou deseja vale transporte? (digite apenas sim ou não)\n").upper()
-vale_refeicao = float(input("Digite o valor do vale refeição: "))
-dependentes = int(input("Quantos dependentes o funcionário possui? (números apenas)\n"))
-acrescimo = float(input("Porcentagem do acréscimo sobre o salário (se houver): "))
+while True:
+    try:
+        salario = float(input("Digite o valor do salário: "))
+        print("O funcionário:")
+        transporte = input("Possui ou deseja vale transporte? (digite apenas sim ou não)\n").upper()
+
+        while True:
+            if transporte in ["SIM", "NÃO"]:
+                break
+            transporte = input("Possui ou deseja vale transporte? (digite apenas sim ou não)\n").upper()
+
+        vale_refeicao = float(input("Digite o valor do vale refeição: "))
+        dependentes = int(input("Quantos dependentes o funcionário possui? (números apenas)\n"))
+        acrescimo = float(input("Porcentagem do acréscimo sobre o salário (se houver): "))
+
+    except Exception as erro:
+        print(f"Erro inesperado: {erro}\n")
+
+    else:
+        break
 
 # processamento
+
 if transporte == "SIM":
     resultado_transporte = desconto_transporte(salario)
     reposta_transporte = f"SIM | {F.LR}R${real(resultado_transporte)}{RESET}"
