@@ -86,7 +86,7 @@ def irrf(salario):
 
 
 def calculo():
-    if acrescimo < 0:
+    if acrescimo < 1:
         salario_final = salario - resultado_transporte - resultado_dependente - resultado_inss - resultado_irrf - resultado_refeicao
     else:
         salario_final = (salario - resultado_transporte - resultado_dependente - resultado_inss - resultado_irrf - resultado_refeicao) * (acrescimo / 100 + 1)
