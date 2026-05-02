@@ -85,32 +85,89 @@ def irrf(salario):
     return salario * desconto
 
 
+def calculo():
+    if acrescimo < 0:
+        salario_final = salario - resultado_transporte - resultado_dependente - resultado_inss - resultado_irrf - resultado_refeicao
+    else:
+        salario_final = (salario - resultado_transporte - resultado_dependente - resultado_inss - resultado_irrf - resultado_refeicao) * (acrescimo / 100 + 1)
+        return salario_final
+
+
+def fim_processo():
+    folha()
+    print(f"""Salário Bruto: R${real(salario)}
+
+    Possui vale transporte?
+    {reposta_transporte}
+    dependente(s):
+    {resposta_dependente}
+    Desconto do vale refeição: {resposta_refeicao}
+
+    INSS: {F.LR}R${real(resultado_inss)}{RESET}
+    IRRF: {resposta_irrf}
+    """)
+
+    if acrescimo > 0:
+        print(f"Acréscimo: {acrescimo}% | {F.LG}R${real(salario_final*(acrescimo/100))}{RESET}\n")
+
+    print(f"Salário final: {F.LG}R${real(salario_final)}{RESET}")
+    print("="*28)
+
+
 # dados
 folha()
 matricula = input("Digite a matrícula do funcionário: ")
-senha = int(input("Digite a senha da matrícula do funcionário: "))
-
-folha()
 while True:
     try:
-        salario = float(input("Digite o valor do salário: "))
-        print("O funcionário:")
-        transporte = input("Possui ou deseja vale transporte? (digite apenas sim ou não)\n").upper()
-
-        while True:
-            if transporte in ["SIM", "NÃO"]:
-                break
-            transporte = input("Possui ou deseja vale transporte? (digite apenas sim ou não)\n").upper()
-
-        vale_refeicao = float(input("Digite o valor do vale refeição: "))
-        dependentes = int(input("Quantos dependentes o funcionário possui? (números apenas)\n"))
-        acrescimo = float(input("Porcentagem do acréscimo sobre o salário (se houver): "))
-
-    except Exception as erro:
-        print(f"Erro inesperado: {erro}\n")
-
+        senha = int(input("Digite a senha da matrícula do funcionário: "))
+    except ValueError:
+        print(f"\nErro, digite apenas números.\n")
     else:
         break
+
+while True:
+    folha()
+    while True:
+        try:
+            salario = float(input("Digite o valor do salário: "))
+        except ValueError:
+            print(f"\nErro, digite apenas números.\n")
+        else:
+            break
+        print("\nO funcionário:")
+
+    while True:
+        transporte = input("Possui ou deseja vale transporte? (digite apenas sim ou não)\n").upper()
+        if transporte in ["SIM", "NÃO"]:
+            break
+        else:
+            print("Digite apenas sim ou não.\n")
+
+    while True:
+        try:
+            vale_refeicao = float(input("Digite o valor do vale refeição: "))
+        except ValueError:
+            print("\nErro. \nDigite apenas números.\n")
+        else:
+            break
+
+    while True:
+        try:
+            dependentes = int(input("Quantos dependentes o funcionário possui? (números apenas)\n"))
+        except ValueError:
+            print("Erro. \nDigite apenas números.")
+        else:
+            break
+
+    while True:
+        try:
+            acrescimo = float(input("Porcentagem do acréscimo sobre o salário (se houver): "))
+        except ValueError:
+            print("Erro. \nDigite apenas números.")
+        else:
+            break
+    break
+
 
 # processamento
 
@@ -148,27 +205,7 @@ else:
     resposta_irrf = f"{F.LR}R${real(resultado_irrf)}{RESET}"
 
 # Cálculo do salário final
-if acrescimo < 0:
-    salario_final = salario - resultado_transporte - resultado_dependente - resultado_inss - resultado_irrf - resultado_refeicao
-else:
-    salario_final = (salario - resultado_transporte - resultado_dependente - resultado_inss - resultado_irrf - resultado_refeicao) * (acrescimo / 100 + 1)
+salario_final = calculo()
 
 # saida de dados
-folha()
-print(f"""Salário Bruto: R${real(salario)}
-
-Possui vale transporte?
-{reposta_transporte}
-dependente(s):
-{resposta_dependente}
-Desconto do vale refeição: {resposta_refeicao}
-
-INSS: {F.LR}R${real(resultado_inss)}{RESET}
-IRRF: {resposta_irrf}
-""")
-
-if acrescimo > 0:
-    print(f"Acréscimo: {acrescimo}% | {F.LG}R${real(salario_final*(acrescimo/100))}{RESET}\n")
-
-print(f"Salário final: {F.LG}R${real(salario_final)}{RESET}")
-print("="*28)
+fim_processo()
