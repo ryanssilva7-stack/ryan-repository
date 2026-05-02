@@ -37,9 +37,6 @@ class Reservas:
     def mensagem(self):
             print(f"""Passageiro: {self.nome}      Avião: Nº {self.aviao}\n""")
 
-    
-    def mensagem2(self):
-            print(f"Pasageiro nos vóos:")
 
 # definições
 def limpar_terminal():
