@@ -1,16 +1,18 @@
 import os
 from colorama import Fore, Back, Style, init
+from dataclasses import dataclass
 import time
+os.system("cls" if os.name == "nt" else "clear")
 
 # Initialize colorama
-init()
+init(autoreset = True)
 
 # Atalhos de Estilo
 RESET = Style.RESET_ALL
 BRIGHT = Style.BRIGHT
 DIM = Style.DIM
 
-# Atalhos de Cores de Fonte (Texto)
+# classes
 class F:
     R   = Fore.RED
     G   = Fore.GREEN
@@ -28,7 +30,7 @@ class F:
     LC  = Fore.LIGHTCYAN_EX
     LW  = Fore.LIGHTWHITE_EX
 
-os.system("cls")
+
 # definições
 
 # dados
