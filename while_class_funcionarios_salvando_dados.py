@@ -53,7 +53,7 @@ while True:
                             )
     armazenamento_funcionarios.append(funcionario)
 
-with open('dados_funcionarios.txt', 'a') as arquivo_funcionarios:
+with open('dados_funcionarios.txt', 'a', encoding='utf-8') as arquivo_funcionarios:
     for funcionario in armazenamento_funcionarios:
         arquivo_funcionarios.write(f'{funcionario.nome}, {funcionario.email}, {funcionario.telefone}\n')
 
