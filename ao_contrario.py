@@ -1,16 +1,16 @@
 import os
 
-massa = input("Massa: ")
+palavra = input("Palavra: ")
 numero = 1
-maneiro = ""
+ao_contrario = ""
 
-for total in massa:
+for total in palavra:
     numero += 1
 
 for i in range(1, numero):
-    maneiro += massa[-i]
+    ao_contrario += palavra[-i]
 
 os.system("cls")
-print("Palavra:", massa.title())
-print("Ao contrário:", maneiro.title())
+print("Palavra:", palavra.title())
+print("Ao contrário:", ao_contrario.title())
 
