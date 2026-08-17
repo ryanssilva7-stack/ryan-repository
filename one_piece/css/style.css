@@ -1,0 +1,47 @@
+h1{
+    font-size: 90px;
+    color: #00ADEA;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2{
+    font-size: 60px;
+    color: #000000;
+    margin-left: 26%;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+hr{
+    width: 50%;
+    background: red;
+    height:1px;
+}
+
+p{
+    width: 50%;
+    margin: auto;
+    text-align: justify;
+}
+
+ul{
+    width: 47%;
+    margin: auto;
+}
+
+img{
+    height: 204px;
+    margin-right: 10px;
+}
+
+.caxa{
+    width: fit-content;
+    margin: auto;
+}
+
+video{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
