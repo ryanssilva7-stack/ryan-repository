@@ -1,0 +1,59 @@
+body {
+    background-image: url('../images/background_rdr_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    font-size: 40px;
+    color: rgb(226, 226, 11);
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    color: rgb(255, 174, 23);
+    margin-left: 100px;
+}
+p{
+    font-size: 20px;
+    color: rgb(233, 232, 232);
+}
+li{
+    margin-left: -6px;
+    font-size: 20px;
+    color: rgb(233, 232, 232);
+}
+video{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
+dd{
+    margin-left: 12px;
+    width: 14%;
+    color: rgb(202, 202, 202);
+}
+.desc_capa{
+    text-align: justify;
+    margin-left: 12px;
+    width: 15%;
+    color: rgb(202, 202, 202);
+}
+.desc_video{
+    margin-left: 430px;
+    width: 30%;
+    color: rgb(202, 202, 202);
+}
+img{
+    margin-left: 6px;
+    border-radius: 10px;
+}
+hr{
+    background: rgb(89, 177, 2);
+    width: 90%;
+    height: 6px;
+    margin: 10px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
