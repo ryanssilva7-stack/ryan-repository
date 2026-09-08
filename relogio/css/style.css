@@ -1,3 +1,8 @@
+@font-face {
+    font-family: alarm_font;
+    src: url(/fonts/DS-DIGI.TTF);
+}
+
 body{
     height: 100vh;
     background: url(../img/reze_wallpaper.jpg);
@@ -12,7 +17,7 @@ body{
 
 .central{
     /* background-color: #00087a2c; */
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(1.4px);
     width: fit-content;
     display: flex;
     justify-content: center;
@@ -28,6 +33,7 @@ body{
 }
 
 .central span{
+    font-family: alarm_font;
     font-size: 120px;
-    color: #60ca80;
+    color: #4ccd73;
 }
