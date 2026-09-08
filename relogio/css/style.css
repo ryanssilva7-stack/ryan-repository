@@ -11,7 +11,7 @@ body{
 }
 
 .central{
-    background-color: rgba(255, 255, 255, 0.159);
+    /* background-color: #00087a2c; */
     backdrop-filter: blur(1px);
     width: fit-content;
     display: flex;
@@ -21,13 +21,13 @@ body{
 }
 
 .central div{
-    background-color: rgba(0, 0, 0, 0.67);
+    background-color: #1b1845cb;
     backdrop-filter: blur(3px);
-    color: white;
     padding: 20px;
     border-radius: 50%;
 }
 
 .central span{
     font-size: 120px;
+    color: #60ca80;
 }
