@@ -1,0 +1,61 @@
+body{
+    height: 97vh;
+    background: url(../img/reze_wallpaper.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.primaria{
+    background-color:  rgba(0, 0, 0, 0.767);
+    backdrop-filter: blur(2px);
+    color: #4ccd73;
+    width: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+
+.primaria div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horas{
+    font-size: 70px;
+    padding-top: 10px;
+}
+
+.data{
+    font-size: 30px;
+    padding: 20px;
+}
+
+.data_sep div{
+    flex-direction: column;
+    border: 2px solid #6b66c7cb;
+    width: 117px;
+    height: 90px;
+    margin: 10px;
+}
+.text{
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.valor{
+    font-size: 24px;
+}
+
+.msg{
+    border: 2px solid orange;
+    font-size: 30px;
+    padding: 10px;
+    margin: 20px;
+}
