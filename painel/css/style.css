@@ -1,3 +1,7 @@
+@font-face {
+    font-family: clock-font;
+    src: url(../font/DS-DIGI.TTF);
+}
 body{
     height: 97vh;
     background: url(../img/reze_wallpaper.jpg);
@@ -8,6 +12,10 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1{
+    color: #823257;
 }
 
 .primaria{
@@ -29,17 +37,21 @@ body{
 
 .horas{
     font-size: 70px;
+    font-family: clock-font;
     padding-top: 10px;
+    color: #7a57cc;
 }
 
 .data{
     font-size: 30px;
     padding: 20px;
+    color: #a8b7d6;
 }
 
 .data_sep div{
     flex-direction: column;
-    border: 2px solid #6b66c7cb;
+    border: 2px solid #4ccd73;
+    color: #ecd87f;
     width: 117px;
     height: 90px;
     margin: 10px;
@@ -54,8 +66,15 @@ body{
 }
 
 .msg{
-    border: 2px solid orange;
+    border: 2px solid #6b66c7cb;
     font-size: 30px;
+    color: #3b83a4;
     padding: 10px;
     margin: 20px;
+}
+
+p{
+    margin-left: 70px;
+    margin-top: 30px;
+    color: #989949;
 }
