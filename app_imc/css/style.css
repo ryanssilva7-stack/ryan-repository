@@ -1,0 +1,57 @@
+body{
+    background: url(../image/background.webp);
+    justify-content: center;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.central{
+    background-color: rgba(255, 255, 255, 0.147);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px ;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    width: 40%;
+    gap: 10px;
+}
+
+.central h1{
+    color: rgb(243, 241, 241);
+}
+
+.central input{
+    border: 2px solid rgb(0, 0, 107);
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+}
+
+.central button{
+    background: rgb(0, 0, 107);
+    color: rgb(246, 246, 246);
+    border-radius: 10px;
+    width: fit-content;
+    font-weight: bold;
+    transition: 0.58s;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 7px;
+    border: 1px;
+    &:hover{
+        background-color: rgb(246, 246, 246);
+        color: rgb(0, 0, 107);
+        transform: scale(1.05);
+        transition: 0.58s;
+    }
+}
+
+.central span{
+    font-size: 20px;
+    color: rgb(1, 1, 46);
+}
