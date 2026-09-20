@@ -1,0 +1,75 @@
+body {
+    background: gray;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.caxa_mae{
+    background-color: white;
+    border: 5px solid rgb(0, 145, 255);
+    border-radius: 11px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.caxa_h1{
+    color: rgb(0, 0, 134);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.caxa_input{
+    border: 1px solid rgb(0, 145, 255);
+    border-radius: 5px;
+    width: 95%;
+    padding: 10px;
+}
+.caxa_input div{
+    padding-bottom: 10px;
+}
+
+.caxa_input button{
+    width: 100%;
+    color: rgb(243, 243, 243);
+    background: rgb(12, 170, 255);
+    border: 1px;
+    border-radius: 5px;
+    padding: 6px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label{
+    color: rgb(1, 26, 125);
+}
+
+input{
+    border: 1px solid rgb(0, 145, 255);;
+    border-radius: 3px;
+    height: 18px;
+    width: 30%;
+    text-align: center;
+    margin-left: 19%;
+}
+
+.resultado{
+    color: rgb(1, 26, 125);
+    background: rgba(164, 183, 230, 0.264);
+    backdrop-filter: blur(1px);
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid rgb(0, 145, 255);
+    border-radius: 5px;
+}
