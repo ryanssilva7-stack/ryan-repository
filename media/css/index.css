@@ -44,6 +44,17 @@ body {
     border-radius: 5px;
     padding: 6px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.1s;
+    &:hover{
+        transform: scale(1.02);
+        &:active{
+            color: rgb(249, 249, 249);
+            transform: scale(0.99);
+            background: rgb(68, 157, 247);
+    }
+    }
 }
 
 label{
